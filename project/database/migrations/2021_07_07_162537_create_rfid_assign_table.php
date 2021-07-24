@@ -15,9 +15,15 @@ class CreateRfidAssignTable extends Migration
     {
         Schema::create('rfid_assign', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('guest_id')->constrained()->onDelete('cascade');
+            $table->foreignId('guest_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('vehicle_id')->nullable()->constrained()->onDelete('cascade');
             $table->foreignId('rfid_id')->constrained()->onDelete('cascade');
-            
+            $table->string('in_status')->nullable();
+            $table->date('in_date')->nullable();
+            $table->time('in_time')->nullable();
+            $table->string('out_status')->nullable();
+            $table->date('out_date')->nullable();
+            $table->time('out_time')->nullable();
             $table->timestamps();
         });
     }
