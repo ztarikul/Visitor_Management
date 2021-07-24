@@ -100,7 +100,7 @@
 @if(auth()->user()->userHasRole('Manager'))
 <div class="row">
 <div class="col-sm-12">
-<a href="{{route('rfid.index')}}"><button style="width: 50%; font-size:100%;" class="btn">RFID MANAGEMENT</button></a>
+<a href="{{route('rfid.index')}}"><button style="width: 93%; font-size:100%;" class="btn"><i class="fas fa-address-card fa-2x"></i><br>RFID MANAGEMENT</button></a>
 </div>
 </div>
 
@@ -108,15 +108,15 @@
 
 <div class="row">
   <div class="col-sm-4">
-  <a href="{{route('guest.employee')}}"><button style="width: 80%; height:90%; font-size:100%;" class="btn"><i class="fas fa-user-plus fa-2x"></i><br><br>GUEST</button></a>
+  <a href="{{route('guest.employee')}}"><button style="width: 80%; height:90%; font-size:100%;" class="btn"><i class="fas fa-users fa-2x"></i><br><br>GUEST</button></a>
   </div>
   
   <div class="col-sm-4">
-  <a href="{{route('guest.special')}}"><button  style="width: 80%; height:90%; font-size:100%;" class="btn"><i class="fas fa-user-lock fa-2x" ></i><br><br>CONTRACTUAL WORKER</button></a>
+  <a href="{{route('guest.special')}}"><button  style="width: 80%; height:90%; font-size:100%;" class="btn"><i class="fas fa-user-tie fa-2x"></i><br><br>CONTRACTUAL WORKER</button></a>
   </div>
 
   <div class="col-sm-4">
-  <a href="{{route('vehicle.index')}}"><button style="width: 80%; height:90%;font-size:100%;" class="btn"><i class="fas fa-user-lock fa-2x" ></i><br><br>VEHICLE </button></a>
+  <a href="{{route('vehicle.index')}}"><button style="width: 80%; height:90%;font-size:100%;" class="btn"><i class="fas fa-truck fa-2x"></i><br><br>VEHICLE </button></a>
   </div>
 </div>
 
