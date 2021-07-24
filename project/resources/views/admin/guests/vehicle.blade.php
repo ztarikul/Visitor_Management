@@ -10,11 +10,23 @@
             <form method="post" action="{{route('vehicle.store')}}" enctype="multipart/form-data">
                 @csrf
 
+                <div class="form-group" style="color:black;">
+                    <label for="title"><b>Company Vehicle<span style="color: red;">*</span></b></label>
+                    <select name="vehicle_company" class="form-select"  style="width:100%" aria-label="Default select example">
+                    <option selected>Out Vehicle</option>
+                    @foreach($company_vehicles as $company_vehicle)
+                    <option value="{{$company_vehicle->vehicle_number}}">{{$company_vehicle->vehicle_number}}</option>
+                    @endforeach
+                    
+                    </select>
+            
+                </div>
+
             
 
                 <div class="form-group" style="color:black;">
                     <label for="title"><b>Vehicle Number<span style="color: red;">*</span></b></label>
-                    <input type="text" style="width:50%" class="form-control" name="vehicle_number" id="title" aria-describedby="" placeholder="Enter Vehicle Number" required>
+                    <input type="text" style="width:50%" class="form-control" name="vehicle_number" value="none" id="title" aria-describedby="" placeholder="Enter Vehicle Number">
                     
                     
                 </div>

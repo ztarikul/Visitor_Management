@@ -115,6 +115,7 @@ Route::get('/special', 'GuestController@specialindex')->name('guest.special');
 //----GO TO ADMIN DASHBOARD AND SHOW ALL EMPLOYEE DETAIL'S----//
 Route::get('/view_all_employee','GuestController@view_employee')->name('guest.view_all_employee');
 
+
 Route::resource('attendance', AttendanceController::class);
 Route::get('/emp_getToken/{id}', 'AttendanceController@attendance_get_token')->name('attendance.get_token');
 Route::get('/truncate_form', 'AttendanceController@truncate_form')->name('attendance.truncate_form');
@@ -139,6 +140,8 @@ Route::post('rfid_return',  'RfidController@return')->name('rfid.return');
 
 //Vehicle Entry
 Route::resource('vehicle',  VehicleController::class);
+
+Route::resource('company_vehicle',  CompanyVehicleController::class);
 
 
 });

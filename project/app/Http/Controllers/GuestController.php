@@ -291,6 +291,9 @@ class GuestController extends Controller
     public function show($id)
     {
         //
+        // dd($id);
+        $guest = Guest::find($id);
+        return view('admin.guests.details', ['guest' =>$guest]);
     }
 
     /**

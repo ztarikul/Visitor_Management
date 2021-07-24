@@ -18,6 +18,7 @@
 <th scope="col">RFID</th>
 <th scope="col">In Time</th>
 <th scope="col">Out Time</th>
+<th scope="col">Details</th>
 </tr>
 </thead>
 <tbody>
@@ -42,6 +43,7 @@
      
     <td>{{$rfid->in_time}}</td>
     <td>{{$rfid->out_time}}</td>
+    <td><a href="{{route('guest.show', $guest->id)}}" class="btn btn-warning btn-sm">Details</a></td>
     </tr>
   @endforeach   
 

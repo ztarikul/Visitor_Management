@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CompanyVehicle;
 use App\Models\Rfid;
 use App\Models\Rfid_assign;
 use App\Models\Vehicle;
@@ -22,8 +23,9 @@ class VehicleController extends Controller
     public function index()
     {
         //
+        $company_vehicles = CompanyVehicle::where('status', "out")->get();
         $rfids = Rfid::where('status', '=', "available")->get();
-        return view('admin.guests.vehicle', ['rfids' => $rfids]);
+        return view('admin.guests.vehicle', ['rfids' => $rfids, 'company_vehicles' => $company_vehicles]);
     }
 
     /**
@@ -56,6 +58,9 @@ class VehicleController extends Controller
             'phone_number' => 'required'
 
         ]);
+        if(request('vehicle_company')){
+            $inputs['vehicle_number'] = $request['vehicle_company'];
+        }
 
         $inputs['purpose'] = $request['purpose'];
         $inputs['carr_item'] = $request['carr_item'];

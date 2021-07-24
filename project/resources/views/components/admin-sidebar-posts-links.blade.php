@@ -7,6 +7,7 @@
    
 
    <a class="nav-link collapsed" href="{{route('employee.view_employee')}}" style="color: white;"> <i class="fas fa-user-friends"></i><span>Employee</span></a> 
+   <a class="nav-link collapsed" href="{{route('company_vehicle.store')}}" style="color: white;"> <i class="fas fa-user-friends"></i><span>Company Vehicle</span></a> 
    
     
     
