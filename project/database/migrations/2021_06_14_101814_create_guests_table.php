@@ -19,7 +19,7 @@ class CreateGuestsTable extends Migration
             $table->string('name');
             $table->string('guest_type')->nullable();
             $table->integer('user_ref_id')->unsigned()->nullable();
-            $table->foreign('user_ref_id')->references('user_ref_id')->on('users');
+            $table->foreign('user_ref_id')->references('user_ref_id')->on('users')->onDelete('cascade');
             $table->string('user_name')->nullable();
             $table->string('phone_number');
             $table->text('guest_purpose')->nullable();

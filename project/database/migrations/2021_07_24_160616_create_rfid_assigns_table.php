@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRfidAssignTable extends Migration
+class CreateRfidAssignsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRfidAssignTable extends Migration
      */
     public function up()
     {
-        Schema::create('rfid_assign', function (Blueprint $table) {
+        Schema::create('rfid_assigns', function (Blueprint $table) {
             $table->id();
             $table->foreignId('guest_id')->nullable()->constrained()->onDelete('cascade');
             $table->foreignId('vehicle_id')->nullable()->constrained()->onDelete('cascade');
@@ -35,6 +35,6 @@ class CreateRfidAssignTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rfid_assign');
+        Schema::dropIfExists('rfid_assigns');
     }
 }
